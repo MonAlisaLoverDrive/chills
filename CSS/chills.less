@@ -1,0 +1,97 @@
+@import "colors";
+
+body
+{
+    background:  @ice-white;
+    
+    padding:     0;
+    margin:      0;
+    
+    font-size:   3vmax;
+    font-family: FiraSans-Light, sans-serif;
+    color:       @pitch-black;
+}
+
+.text-cover
+{
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+div.menu
+{
+    position:      fixed;
+    top:           0;
+    left:          0;
+    
+    color:         @snow-white;
+    background:    @black-ice;
+    
+    padding:       1vmax;
+    
+    height:        10vh;
+    width:         100vw;
+    border-bottom: 0.5vh solid @steel-gray;
+    
+    box-sizing:    border-box;
+    overflow:      hidden;
+    
+    //display: flex;
+    
+    @media @landscape
+    {
+        width:         10vw;
+        height:        100vh;
+        border-bottom: none;
+        border-right:  0.5vmax solid @steel-gray;
+    }
+    
+    @media @screen-lg and @landscape
+    {
+        width: 25vw;
+    }
+    
+    div.menu-item
+    {
+        display:        inline-block;
+        vertical-align: middle;
+        
+        div.avatar
+        {
+            display:        inline-block;
+            width:          8vh;
+            height:         8vh;
+            
+            background:     white;
+            border-radius:  100%;
+            vertical-align: middle;
+        }
+        
+        img
+        {
+            height: 5vh;
+        }
+        
+        div.caption
+        {
+            vertical-align: middle;
+            display:        none;
+            
+            @media @landscape
+            {
+                display: inline-block;
+            }
+            
+            &.name
+            {
+                width: 25vw;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+[v-cloak]
+{
+    display: none;
+}

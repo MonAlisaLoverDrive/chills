@@ -1,0 +1,91 @@
+@import 'assets/colors';
+
+body
+{
+    padding:     0;
+    margin:      0;
+    font-size:   16px;
+    font-family: 'PT Sans', sans-serif;
+    
+    *
+    {
+        position: relative;
+    }
+}
+
+.red
+{
+    color: @danger-red;
+}
+
+.green
+{
+    color: @safe-green;
+}
+
+.deep-water
+{
+    color: @deep-water;
+}
+
+#app
+{
+    background: @ice-white;
+    
+    position:   absolute;
+    width:      100%;
+    height:     100%;
+    
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    
+    content
+    {
+        flex: 1;
+        overflow: scroll;
+    }
+    
+    span.dot
+    {
+        position:    absolute;
+        font-family: 'FontAwesome', sans-serif;
+        
+        &.bottom
+        {
+            bottom: 0;
+        }
+        
+        &.top
+        {
+            top: 0;
+        }
+        
+        &.left
+        {
+            left: 0;
+        }
+        
+        &.right
+        {
+            right: 0;
+        }
+        
+        &.sm
+        {
+            font-size: 1.5vh;
+        }
+        
+        &.lg
+        {
+            font-size: 3vh;
+        }
+    }
+    
+    span.dot:after
+    {
+        display: block;
+        content: '';
+    }
+}
