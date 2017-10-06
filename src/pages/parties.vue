@@ -2,14 +2,8 @@
     <div class="parties">
         <search-bar></search-bar>
 
-        <content>
-            <card></card>
-            <card></card>
-            <card></card>
-            <card></card>
-            <card></card>
-            <card></card>
-            <card></card>
+        <content v-for="party in $root.parties">
+            <card :party="party"></card>
         </content>
 
         <action-button>+</action-button>

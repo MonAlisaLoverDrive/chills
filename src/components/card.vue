@@ -1,20 +1,17 @@
 <template>
     <div class="card" :class="{ sm: (Math.random()>0.5)}">
-        <div class="header">Open party season 2017</div>
+        <div class="header">{{ party.name }}</div>
         <div class="date">
             <i class="fa fa-calendar-o" aria-hidden="true"></i>
-            09.11.2017
+            {{ party.date }}
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            08:00 PM
+            {{ party.time }}
         </div>
         <div class="description">
-            #lorem #ipsum #dolor<br>
-            #sit #amet
-            <br><br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor at leo a malesuada. Proin scelerisque libero vitae orci faucibus congue. Pellentesque scelerisque sollicitudin lorem a aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames...
+            {{ party.description }}
         </div>
         <div class="username">
-            Alice
+            {{ party.ownerName }}
         </div>
 
     </div>
@@ -72,5 +69,8 @@
 </style>
 
 <script>
-    export default {}
+    export default
+    {
+        props: ['party']
+    }
 </script>

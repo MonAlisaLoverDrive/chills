@@ -15,7 +15,8 @@ window.sierra = new Vue({
     {
         return {
             currentPage: 'parties',
-            userdata: {displayName: '', username: ''}
+            userdata: {displayName: '', username: ''},
+            parties: [{name:'Test', date:'01.01.01', time:'08:00 PM', description:'this is a test', ownerName: 'test'}, {name:'Test', date:'01.01.01', time:'08:00 PM', description:'this is a test', ownerName: 'test'}]
         }
     },
 });

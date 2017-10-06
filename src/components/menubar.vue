@@ -135,7 +135,8 @@
 <script>
     import TextCover from './textCover.vue';
 
-    export default {
+    export default
+    {
         components: {TextCover},
     }
 </script>
