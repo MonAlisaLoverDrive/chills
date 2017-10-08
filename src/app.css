@@ -27,7 +27,7 @@ body * {
 }
 #app content {
   flex: 1;
-  overflow: scroll;
+  overflow: hidden;
 }
 #app span.dot {
   position: absolute;
@@ -54,4 +54,14 @@ body * {
 #app span.dot:after {
   display: block;
   content: '';
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.8s, transform 0.8s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+  position: absolute;
 }

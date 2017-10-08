@@ -2,29 +2,37 @@
     <div>
         <div class="menu-placeholder"></div>
         <div class="menu">
-            <div class="menu-item userdata">
-                <img src="assets/img/default_avatar.png">
-                <div class="wrapper">
-                    <text-cover>{{ $root.userdata.displayName }}</text-cover>
-                    <span class="username">@{{ $root.userdata.username }}</span>
+            <router-link :to="'/users/'+(1+2)">
+                <div class="menu-item userdata">
+                    <img src="assets/img/default_avatar.png">
+                    <div class="wrapper">
+                        <text-cover>{{ $root.userdata.displayName }}</text-cover>
+                        <span class="username">@{{ $root.userdata.username }}</span>
+                    </div>
                 </div>
-            </div>
+            </router-link>
             <div class="placeholder">
 
             </div>
-            <div class="menu-item">
-                <img src="assets/icons/shoe.svg">
-            </div>
-            <div class="menu-item">
-                <img src="assets/icons/polaroid.svg">
-            </div>
+            <router-link to="/parties">
+                <div class="menu-item" onclick="">
+                    <img src="assets/icons/shoe.svg">
+                </div>
+            </router-link>
+            <router-link to="/photos">
+                <div class="menu-item">
+                    <img src="assets/icons/polaroid.svg">
+                </div>
+            </router-link>
             <div class="menu-item">
                 <img src="assets/icons/bell.svg">
                 <span class="dot top right red sm"></span>
             </div>
+
+            <router-link to="/settings">
             <div class="menu-item">
                 <img src="assets/icons/gear.svg">
-            </div>
+            </div></router-link>
         </div>
     </div>
 </template>
@@ -135,8 +143,7 @@
 <script>
     import TextCover from './textCover.vue';
 
-    export default
-    {
+    export default {
         components: {TextCover},
     }
 </script>

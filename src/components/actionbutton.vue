@@ -25,6 +25,14 @@
 
         z-index:       6;
         box-shadow:    0.3vh 0.3vh 1.6vh 0 rgba(0, 0, 0, 0.5);
+
+        @media @screen-lg
+        {
+            width:       5vw;
+            height:      5vw;
+            line-height: 5vw;
+            font-size:   5vw;
+        }
     }
 </style>
 

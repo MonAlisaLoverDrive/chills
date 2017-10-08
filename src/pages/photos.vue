@@ -1,10 +1,10 @@
 <template>
     <transition name="fade">
-        <div class="parties">
+        <div class="photos">
             <search-bar></search-bar>
 
             <!--<div class="partylist">-->
-                <!--<card :party="party" v-for="party in $root.parties" :key="party.id"></card>-->
+            <!--<card :party="party" v-for="party in $root.parties" :key="party.id"></card>-->
             <!--</div>-->
 
 
@@ -16,9 +16,9 @@
 <style lang="less">
     @import '../assets/colors';
 
-    div.parties
+    div.photos
     {
-        height: 100%;
+        height:     100%;
 
         div.partylist
         {

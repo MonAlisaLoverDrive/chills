@@ -2,7 +2,9 @@
     <div id="app">
         <menu-bar></menu-bar>
         <content>
-            <parties v-if="$root.currentPage === 'parties'"></parties>
+            <transition name="fade">
+                <router-view></router-view>
+            </transition>
         </content>
 
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
