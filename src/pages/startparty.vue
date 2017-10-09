@@ -1,14 +1,7 @@
 <template>
     <transition name="fade">
-        <div class="parties">
-            <search-bar></search-bar>
-
-            <div class="partylist">
-                <card :party="party" v-for="party in $root.parties" :key="party.id"></card>
-            </div>
-
-
-            <action-button onclick="sierra.router.push('startparty')">+</action-button>
+        <div class="startparty">
+            START PARTY
         </div>
     </transition>
 </template>
@@ -16,7 +9,7 @@
 <style lang="less">
     @import '../assets/colors';
 
-    div.parties
+    div.startparty
     {
         height: 100%;
 
