@@ -17,7 +17,7 @@
     {
         div.search-placeholder
         {
-            height:  8vh;
+            height:  9vh;
             z-index: 0;
         }
 

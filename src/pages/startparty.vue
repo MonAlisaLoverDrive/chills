@@ -2,14 +2,24 @@
     <!--<transition name="fade">-->
         <div class="startparty">
             <div class="input-wrapper">
-                Party name
-                <input></div>
+                <span class="description">Party name</span>
+                <input>
+            </div>
             <div class="input-wrapper">
-                Date and time
-                <input></div>
-            <div class="input-wrapper">
-                Description
+                <span class="description">Party name</span>
+                <input>
+            </div>
+            <div class="hash-suggestions">
+                <span class="description">Suggestions</span><br>
+                #almaty #betonomeshalka #meshaet_beton #brigada_stroiteley
+                #zhret #samogon
+            </div>
+            <div class="input-wrapper description-area">
+                <span class="description">Description</span>
                 <textarea></textarea>
+            </div>
+            <div class="input-wrapper">
+                <button class="flat">Start the party</button>
             </div>
         </div>
     <!--</transition>-->
@@ -23,10 +33,24 @@
         width: 100%;
         height: 100%;
 
-        div.partylist
+        display: flex;
+        flex-direction: column;
+
+        div.description-area
         {
-            display:   flex;
-            flex-wrap: wrap;
+            flex: 1;
+
+            textarea
+            {
+                flex: 1;
+            }
+        }
+
+        div.hash-suggestions
+        {
+            font-size: 3.5vh;
+            margin: 1vh;
+            color: @ice-gray;
         }
     }
 </style>

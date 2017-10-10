@@ -2,12 +2,12 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 300;
-  color: #1f2026;
 }
 body * {
   position: relative;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: #1f2026;
 }
 .red {
   color: #ff4437;
@@ -16,7 +16,7 @@ body * {
   color: #00a752;
 }
 .deep-water {
-  color: #3f7997;
+  color: #3d92af;
 }
 #app {
   background: #dcdfe1;
@@ -58,35 +58,69 @@ body * {
   content: '';
 }
 div.input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   margin: 1vh;
   font-size: 4vh;
+  align-content: flex-start;
 }
-div.input-wrapper input {
+div.input-wrapper span.description {
+  display: block;
+  flex-basis: 100%;
+}
+div.input-wrapper input,
+div.input-wrapper button,
+div.input-wrapper textarea {
   outline: none;
   border: none;
   border-radius: 0.5vh;
   background: #fff;
   color: #1f2026;
   box-sizing: border-box;
-  width: 100%;
+  flex: 1;
   font-size: 4vh;
   line-height: 4vh;
   padding: 1vh;
-  box-shadow: 0 0.1vh 1.1vh 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1.1vh 0vh rgba(0, 0, 0, 0.5);
+  transition: box-shadow, 0.3s;
+}
+div.input-wrapper input:focus,
+div.input-wrapper button:focus,
+div.input-wrapper textarea:focus,
+div.input-wrapper input:active,
+div.input-wrapper button:active,
+div.input-wrapper textarea:active {
+  box-shadow: 0 0.6vh 1.6vh 0 rgba(0, 0, 0, 0.5);
+}
+div.input-wrapper button {
+  overflow: hidden;
+}
+div.input-wrapper button.flat {
+  background: none;
+  box-shadow: none;
+  text-align: right;
+}
+div.input-wrapper button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 50%;
+  padding-top: 50%;
+  opacity: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, 0.3);
+  transform: translate(-50%, -50%);
+  transition: .3s;
+}
+div.input-wrapper button:active::before {
+  width: 120%;
+  padding-top: 120%;
+  opacity: 1;
 }
 div.input-wrapper textarea {
-  font-size: 4vh;
-  height: 24vh;
-  width: 100%;
-  outline: none;
-  border: none;
-  border-radius: 0.5vh;
-  background: #fff;
-  color: #1f2026;
-  box-sizing: border-box;
-  line-height: 4vh;
-  padding: 1vh;
-  box-shadow: 0 0.1vh 1.1vh 0 rgba(0, 0, 0, 0.5);
+  height: 6em;
   resize: none;
 }
 .fade-enter-active,
