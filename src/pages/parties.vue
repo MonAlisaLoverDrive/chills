@@ -1,5 +1,5 @@
 <template>
-    <transition name="fade">
+    <!--<transition name="fade">-->
         <div class="parties">
             <search-bar></search-bar>
 
@@ -10,7 +10,7 @@
 
             <action-button onclick="sierra.router.push('startparty')">+</action-button>
         </div>
-    </transition>
+    <!--</transition>-->
 </template>
 
 <style lang="less">
@@ -19,6 +19,7 @@
     div.parties
     {
         height: 100%;
+        width:  100%;
 
         div.partylist
         {

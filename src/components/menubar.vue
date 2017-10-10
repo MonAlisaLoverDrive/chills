@@ -103,7 +103,7 @@
         div.menu-item.userdata
         {
             height:    8vh;
-            width:     50%;
+            width:     49vw;
             font-size: 3vh;
 
             div.wrapper

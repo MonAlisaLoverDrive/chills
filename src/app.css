@@ -2,7 +2,9 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: #1f2026;
 }
 body * {
   position: relative;
@@ -54,6 +56,38 @@ body * {
 #app span.dot:after {
   display: block;
   content: '';
+}
+div.input-wrapper {
+  margin: 1vh;
+  font-size: 4vh;
+}
+div.input-wrapper input {
+  outline: none;
+  border: none;
+  border-radius: 0.5vh;
+  background: #fff;
+  color: #1f2026;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 4vh;
+  line-height: 4vh;
+  padding: 1vh;
+  box-shadow: 0 0.1vh 1.1vh 0 rgba(0, 0, 0, 0.5);
+}
+div.input-wrapper textarea {
+  font-size: 4vh;
+  height: 24vh;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 0.5vh;
+  background: #fff;
+  color: #1f2026;
+  box-sizing: border-box;
+  line-height: 4vh;
+  padding: 1vh;
+  box-shadow: 0 0.1vh 1.1vh 0 rgba(0, 0, 0, 0.5);
+  resize: none;
 }
 .fade-enter-active,
 .fade-leave-active {

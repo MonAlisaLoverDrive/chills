@@ -1,9 +1,18 @@
 <template>
-    <transition name="fade">
+    <!--<transition name="fade">-->
         <div class="startparty">
-            START PARTY
+            <div class="input-wrapper">
+                Party name
+                <input></div>
+            <div class="input-wrapper">
+                Date and time
+                <input></div>
+            <div class="input-wrapper">
+                Description
+                <textarea></textarea>
+            </div>
         </div>
-    </transition>
+    <!--</transition>-->
 </template>
 
 <style lang="less">
@@ -11,6 +20,7 @@
 
     div.startparty
     {
+        width: 100%;
         height: 100%;
 
         div.partylist

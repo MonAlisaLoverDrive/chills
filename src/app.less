@@ -5,8 +5,10 @@ body
     padding:     0;
     margin:      0;
     font-size:   16px;
-    font-family: 'PT Sans', sans-serif;
-
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    color:       @pitch-black;
+    
     *
     {
         position: relative;
@@ -31,62 +33,108 @@ body
 #app
 {
     background:     @ice-white;
-
+    
     position:       absolute;
     width:          100%;
     height:         100%;
-
+    
     overflow:       hidden;
-
+    
     display:        flex;
     flex-direction: column;
-
+    
     content
     {
         flex:     1;
         overflow: hidden;
     }
-
+    
     span.dot
     {
         position:    absolute;
         font-family: 'FontAwesome', sans-serif;
-
+        
         &.bottom
         {
             bottom: 0;
         }
-
+        
         &.top
         {
             top: 0;
         }
-
+        
         &.left
         {
             left: 0;
         }
-
+        
         &.right
         {
             right: 0;
         }
-
+        
         &.sm
         {
             font-size: 1.5vh;
         }
-
+        
         &.lg
         {
             font-size: 3vh;
         }
     }
-
+    
     span.dot:after
     {
         display: block;
         content: '';
+    }
+}
+
+div.input-wrapper
+{
+    margin:    1vh;
+    font-size: 4vh;
+    
+    input
+    {
+        outline:       none;
+        border:        none;
+        border-radius: 0.5vh;
+        
+        background:    @snow-white;
+        color:         @pitch-black;
+        
+        box-sizing:    border-box;
+        width:         100%;
+        font-size:     4vh;
+        line-height:   4vh;
+        padding:       1vh;
+        
+        box-shadow:    0 0.1vh 1.1vh 0 rgba(0, 0, 0, 0.5);
+    }
+    
+    textarea
+    {
+        font-size:     4vh;
+        height:        24vh;
+        width:         100%;
+        
+        outline:       none;
+        border:        none;
+        border-radius: 0.5vh;
+        
+        background:    @snow-white;
+        color:         @pitch-black;
+        
+        box-sizing:    border-box;
+        line-height:   4vh;
+        padding:       1vh;
+        
+        box-shadow:    0 0.1vh 1.1vh 0 rgba(0, 0, 0, 0.5);
+        
+        resize:        none;
     }
 }
 
@@ -98,6 +146,6 @@ body
 .fade-enter, .fade-leave-to
 {
     opacity:  0;
-
+    
     position: absolute;
 }
